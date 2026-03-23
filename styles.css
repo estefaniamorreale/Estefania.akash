@@ -1,0 +1,545 @@
+:root {
+    --primary-pink: #ec4899;
+    /* Vibrant Pink from logo */
+    --accent-yellow: #fde047;
+    /* Bright Yellow/Gold from infinity symbol */
+    --glow-color: rgba(253, 224, 71, 0.6);
+    --text-white: #ffffff;
+    --dark-overlay: rgba(0, 0, 0, 0.4);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Soft pink gradient background */
+    background: radial-gradient(circle at center, #ff85b3 0%, #ec4899 100%);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: 'Cinzel', serif;
+    color: var(--text-white);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Infinity Glow Effect */
+.infinity-glow {
+    box-shadow: 0 0 30px var(--glow-color);
+    border: 2px solid var(--accent-yellow);
+}
+
+/* Glassmorphism utility */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-yellow);
+    text-shadow: 0 0 10px var(--accent-yellow);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 5%;
+    background: url('assets/logo.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(236, 72, 153, 0.6);
+    /* Pink tint */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--text-white);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-yellow);
+    font-weight: 600;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.btn.primary {
+    background: var(--accent-yellow);
+    color: #ec4899;
+    box-shadow: 0 0 20px rgba(253, 224, 71, 0.4);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-white);
+    border: 1px solid var(--text-white);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--accent-yellow);
+}
+
+.services {
+    padding: 1.5rem 5%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-card {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 0.4s;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 30px rgba(253, 224, 71, 0.2);
+}
+
+.service-card .icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 10px var(--accent-yellow));
+}
+
+/* Tarot Application Section */
+.tarot-app {
+    padding: 1rem 5% 2rem 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+.tarot-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.deck-container {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    perspective: 1000px;
+}
+
+.deck {
+    position: relative;
+    width: 200px;
+    height: 320px;
+}
+
+.glass-card {
+    width: 180px;
+    height: 280px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid var(--accent-yellow);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-back-static::after {
+    content: '∞';
+    font-size: 4rem;
+    color: var(--accent-yellow);
+    text-shadow: 0 0 20px var(--accent-yellow);
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.result-card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.result-card {
+    width: 100%;
+    max-width: 500px;
+    height: auto !important;
+    min-height: 150px;
+    padding: 1.5rem;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.message-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px var(--accent-yellow));
+}
+
+.message-box {
+    width: 100%;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.drawn-card-wrapper {
+    perspective: 1000px;
+}
+
+.card-display {
+    position: relative;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+    background-size: cover;
+    background-position: center;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+#card-name {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+#card-meaning {
+    font-size: 1.5rem !important;
+    line-height: 1.4;
+    color: #ffffff !important;
+    /* Pure white */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+
+.fade-in-delay {
+    animation: fadeIn 1.2s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+footer {
+    padding: 4rem 5%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--accent-yellow);
+}
+
+.footer-content h3 {
+    margin-bottom: 2rem;
+    color: var(--accent-yellow);
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarot-container {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Cazador de Estrellas Game Styles */
+.game-section {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.game-intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--accent-yellow);
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+.game-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.game-screen.hidden {
+    display: none;
+}
+
+#game-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.score-board {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 20;
+    font-weight: bold;
+}
+
+.energy-bar-container {
+    width: 200px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+.energy-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #fde047, #ec4899);
+    transition: width 0.3s ease-out;
+    box-shadow: 0 0 10px var(--accent-yellow);
+}
+
+/* Floating Elements */
+.floating-element {
+    position: absolute;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    transition: transform 0.1s, opacity 0.2s;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+}
+
+.floating-element.positive {
+    color: var(--accent-yellow);
+    box-shadow: 0 0 10px rgba(253, 224, 71, 0.3);
+}
+
+.floating-element.positive:hover {
+    transform: scale(1.1);
+    background: rgba(253, 224, 71, 0.2);
+}
+
+.floating-element.negative {
+    color: #cbd5e1;
+    /* slate-300 */
+    opacity: 0.7;
+}
+
+.floating-element.negative:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.float-up {
+    animation: floatUp 4s linear forwards;
+}
+
+@keyframes floatUp {
+    from {
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    to {
+        bottom: 110%;
+        opacity: 0;
+    }
+}
+
+.star-message {
+    padding: 1rem;
+    font-style: italic;
+    font-size: 1.2rem;
+}

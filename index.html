@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estefania Akasha - Tarot y Terapias Alternativas</title>
+    <meta name="description"
+        content="Descubre tu camino con Estefania Akash. Lectura de Tarot, Registros Akáshicos y Terapias Holísticas para tu bienestar emocional.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="glass">
+            <div class="logo">Estefania Akash</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#tarot">Tarot Online</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">Estefania Akash</h1>
+                <p class="fade-in-delay">Sanación Holística y Guía Espiritual</p>
+                <div class="cta-buttons">
+                    <a href="#tarot" class="btn primary">Lectura de Tarot</a>
+                    <a href="#servicios" class="btn secondary">Mis Terapias</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <h2 class="section-title">Servicios Holísticos</h2>
+            <div class="services-grid">
+                <div class="service-card glass">
+                    <div class="icon">🧘‍♀️</div>
+                    <h3>Armonización Reiki</h3>
+                    <p>Equilibra tu energía vital y encuentra paz interior a través de la canalización de luz.</p>
+                </div>
+                <div class="service-card glass">
+                    <div class="icon">📖</div>
+                    <h3>Registros Akáshicos</h3>
+                    <p>Accede a la sabiduría de tu alma para comprender tu presente y sanar desde la raíz.</p>
+                </div>
+                <div class="service-card glass">
+                    <div class="icon">🔢</div>
+                    <h3>Cartas Numerológicas</h3>
+                    <p>Descubre los mensajes ocultos en tus números para potenciar tu camino de vida.</p>
+                </div>
+                <div class="service-card glass">
+                    <div class="icon">🔮</div>
+                    <h3>Lectura de Tarot</h3>
+                    <p>Claridad y guía espiritual para navegar tus decisiones con consciencia y propósito.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tarot" class="tarot-app">
+            <div class="tarot-container glass">
+                <div class="oracle-header">
+                    <h2>El Oráculo del Alma</h2>
+                    <p>Cierra los ojos, respira y recibe tu mensaje.</p>
+                </div>
+
+                <div id="oracle-content">
+                    <div id="deck-wrapper" class="deck-container">
+                        <div id="deck" class="deck">
+                            <div class="card-back-static glass-card"></div>
+                        </div>
+                    </div>
+
+                    <div id="result-container" class="result-container hidden">
+                        <div class="result-card-wrapper">
+                            <div class="glass-card result-card">
+                                <div id="message-icon" class="message-icon">✨</div>
+                                <div class="message-box">
+                                    <p id="card-meaning">Tu mensaje aparecerá aquí...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="draw-again" class="btn secondary">Nueva Señal</button>
+                    </div>
+
+
+                </div>
+
+                <div class="controls">
+                    <button id="shuffle-btn" class="btn primary">Recibir mi Mensaje</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="juego-estrellas" class="game-section">
+        <div class="game-container glass">
+            <h2 class="section-title">Cazador de Estrellas</h2>
+            <p class="game-intro">Atrapa las palabras de luz para elevar tu vibración. Evita las dudas.</p>
+
+            <div id="game-area" class="game-area">
+                <div id="start-screen" class="game-screen active">
+                    <button id="start-game-btn" class="btn primary">Comenzar Viaje</button>
+                </div>
+
+                <div id="play-screen" class="game-screen hidden">
+                    <div class="score-board">
+                        <span>Energía:</span>
+                        <div class="energy-bar-container">
+                            <div id="energy-bar" class="energy-bar"></div>
+                        </div>
+                    </div>
+                    <div id="game-canvas"></div>
+                </div>
+
+                <div id="win-screen" class="game-screen hidden glass-card result-card">
+                    <h3>¡Energía Elevada!</h3>
+                    <div class="message-icon">✨</div>
+                    <p id="star-message" class="star-message"></p>
+                    <button id="restart-game-btn" class="btn secondary">Volver a Jugar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="glass">
+        <div class="footer-content">
+            <h3>Conecta con Estefania Akash</h3>
+            <div class="contact-info">
+                <p>📲 <strong>WhatsApp:</strong> 54 9 1158247829</p>
+                <p>📸 <strong>Instagram:</strong> @estefania.akash</p>
+            </div>
+            <p class="copyright">&copy; 2026 Estefania Akash. Energía y Luz.</p>
+        </div>
+    </footer>
+
+
+    <script src="tarot-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

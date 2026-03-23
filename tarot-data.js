@@ -1,0 +1,22 @@
+const soulMessages = [
+    { id: 1, text: "La felicidad se alcanza cuando lo que uno piensa, lo que uno dice y lo que uno hace están en armonía.", author: "Mahatma Gandhi" },
+    { id: 2, text: "El alma siempre sabe qué hacer para curarse a sí misma; el desafío es silenciar la mente.", author: "" },
+    { id: 3, text: "En el silencio del alma, encontrarás respuestas que el ruido del mundo no puede ofrecer.", author: "" },
+    { id: 4, text: "La sincronicidad es la forma en que el universo nos dice que estamos en el camino correcto.", author: "" },
+    { id: 5, text: "Goza de tu alma, es la única cosa que realmente te pertenece.", author: "Séneca" },
+    { id: 6, text: "Cuando te das cuenta de tu potencial, nadie puede hacerte sentir inferior.", author: "" },
+    { id: 7, text: "La verdadera belleza se refleja en la pureza de tu alma.", author: "" },
+    { id: 8, text: "Confía en los tiempos del universo; lo que es para ti, llegará con la sincronía perfecta.", author: "" },
+    { id: 9, text: "Tu alma es un espejo del universo. Aprende a mirar adentro con amor.", author: "" },
+    { id: 10, text: "El corazón tiene razones que la razón no comprende. Escucha tu intuición.", author: "Blaise Pascal" },
+    { id: 11, text: "Cada encuentro es una sincronía, cada obstáculo es una lección del alma.", author: "" },
+    { id: 12, text: "Suelta lo que no te permite volar. Tu alma merece ser libre.", author: "" },
+    { id: 13, text: "La paz comienza cuando decides no permitir que otra persona o evento controle tus emociones.", author: "" },
+    { id: 14, text: "Eres luz en expansión. No permitas que nada apague tu brillo interior.", author: "" },
+    { id: 15, text: "La sincronicidad es el lenguaje secreto del alma.", author: "" },
+    { id: 16, text: "No busques el camino, sé el camino. Tu alma ya conoce el rumbo.", author: "" },
+    { id: 17, text: "Todo lo que buscas está dentro de ti. Solo tienes que aprender a escucharte.", author: "Rumi" },
+    { id: 18, text: "La vida no te sucede, te responde. Vibra en la frecuencia de lo que deseas.", author: "" },
+    { id: 19, text: "Tu alma es valiosa y única. No te compares con nadie más.", author: "" },
+    { id: 20, text: "El universo siempre conspira a tu favor cuando tus intenciones nacen del amor.", author: "" }
+];
